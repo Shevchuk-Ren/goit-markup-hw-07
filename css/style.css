@@ -78,7 +78,7 @@ body {
   background-color: transparent;
   cursor: pointer;
 }
-.button.third,
+.button__third,
 .button__primary {
   min-width: 200px;
   padding: 10px 32px;
@@ -168,7 +168,7 @@ body {
   visibility: visible;
   transition: opacity 250ms var(--timing-fm), visibility 250ms var(--timing-fm);
 }
-.backdrop.is-hidden {
+.is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
@@ -191,7 +191,7 @@ body {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-.modal-button {
+.modal__button {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -201,21 +201,22 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
-.modal-svg {
-  transition: fill 250ms var(--timing-fm);
-}
-.modal-button:hover {
+.modal__button:hover {
   outline: none;
   fill: var(--accent-color);
 }
 
-.modal-button:focus {
+.modal__button:focus {
   outline: none;
   box-shadow: 0 0 0 1px var(--accent-color);
   border-radius: 50%;
   fill: var(--accent-color);
 }
-.modal-headline {
+.modal__icon {
+  transition: fill 250ms var(--timing-fm);
+}
+
+.signup__headline {
   display: inline-block;
   font-size: 20px;
   line-height: 1.15;
@@ -223,40 +224,34 @@ body {
   margin-bottom: 12px;
   color: var(--title-text-color);
 }
-.form {
+.signup__form {
   font-size: 12px;
   line-height: 1.166;
-  /* identical to box height */
-
   letter-spacing: 0.01em;
-  /* outline: 2px solid red; */
 }
-.comment-field,
-.form-field {
+.comment-field {
   display: flex;
   flex-direction: column;
   text-align: start;
 }
 .form-field {
-  /* outline: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  text-align: start;
   position: relative;
   margin-bottom: 10px;
 }
 .comment-field {
   margin-bottom: 20px;
-
-  /* outline: 1px solid green; */
 }
-.check {
-}
-.textarea::placeholder {
+.comment-field__textarea::placeholder {
   font-size: 14px;
   line-height: 1.142;
   letter-spacing: 0.01em;
 
   color: rgba(117, 117, 117, 0.5);
 }
-.tel-svg {
+.form-icon__icon {
   position: absolute;
   left: 12px;
   top: 50%;
@@ -265,7 +260,7 @@ body {
 .form-icon {
   position: relative;
 }
-.form-icon .input {
+.form-icon__input {
   font-family: inherit;
   font-size: 14px;
   line-height: 1.714;
@@ -279,38 +274,27 @@ body {
   border-radius: 4px;
   transition: border 250ms var(--timing-fm);
 }
-/* .form-icon .input:hover + .tel-svg {
-  transition: fill 250ms var(--timing-fm);
-} */
-/* .form-icon .input:hover + .tel-svg {
-  fill: var(--accent-color);
-} */
-.form-icon .input:focus-within + .tel-svg {
+.form-icon__input:focus-within + .form-icon__icon {
   fill: var(--accent-color);
   transition: fill 250ms var(--timing-fm);
 }
-/* .form-icon .input:hover {
-  border: 1px solid var(--accent-color);
-  border-radius: 4px;
-} */
-.comment-field .textarea:focus,
-.form-icon .input:focus {
+.comment-field__textarea:focus,
+.form-icon__input:focus {
   outline: none;
   border: 1px solid var(--accent-color);
   border-radius: 4px;
 }
 
-.comment-field .textarea {
+.comment-field__textarea {
+  height: 120px;
+  margin-top: 4px;
+  padding: 12px 16px;
+  resize: none;
   font-family: inherit;
   font-size: 14px;
   line-height: 1.142;
   letter-spacing: 0.01em;
   color: var(--primary-text-color);
-  height: 120px;
-  margin-top: 4px;
-  padding: 12px 16px;
-  resize: none;
-
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border 250ms var(--timing-fm);
@@ -322,35 +306,41 @@ body {
   line-height: 1.714;
   letter-spacing: 0.03em;
 }
-.label-checkbox a {
+.checkbox__link {
   color: var(--accent-color);
 }
-.check {
+.checkbox__icon {
   margin: 5px 5px 7px 13px;
   border: 2px solid #2a2a2a;
   border-radius: 2px;
   cursor: pointer;
 }
 
-.label-checkbox {
+.checkbox__label {
   display: flex;
 }
-.label-checkbox span {
+.checkbox__span {
   display: block;
 }
-.input-checbox {
+.checkbox__input {
   display: none;
 }
-.check-icon {
-  display: none;
-}
-.input-checbox:checked + .check use {
+.checkbox__svg {
   display: block;
 }
-.input-checbox:checked + .check {
+.checkbox__input:checked + .checkbox__svg {
+  display: block;
+}
+.checkbox__input:checked + .checkbox__icon {
   border: none;
 }
 
+/* .checkbox__svg:checked {
+  display: block;
+} */
+/* .checkbox__svg {
+  display: block;
+} */
 /*container*/
 .container {
   width: 1200px;
