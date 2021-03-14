@@ -328,16 +328,49 @@ body {
 .checkbox__svg {
   display: block;
 }
-.checkbox__input:checked + .checkbox__svg {
+.checkbox__input:checked + use {
   display: block;
 }
 .checkbox__input:checked + .checkbox__icon {
   border: none;
 }
-
-/* .checkbox__svg:checked {
+/* жесть */
+.checkbox {
   display: block;
-} */
+
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+}
+.label-checkbox a {
+  color: var(--accent-color);
+}
+.check {
+  margin: 5px 5px 7px 13px;
+  border: 2px solid #2a2a2a;
+  border-radius: 2px;
+  cursor: pointer;
+}
+/*   */
+
+.label-checkbox {
+  display: flex;
+}
+.label-checkbox span {
+  display: block;
+}
+.input-checbox {
+  display: none;
+}
+.check-icon {
+  display: none;
+}
+.input-checbox:checked + .check use {
+  display: block;
+}
+.input-checbox:checked + .check {
+  border: none;
+}
 /* .checkbox__svg {
   display: block;
 } */
