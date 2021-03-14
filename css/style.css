@@ -111,7 +111,7 @@ body {
   transition: color 250ms var(--timing-fm),
     background-color 250ms var(--timing-fm), box-shadow 250ms var(--timing-fm);
 }
-.button.fourth {
+.button-fourth {
   font-weight: bold;
   font-size: 16px;
   line-height: 1.9;
@@ -130,7 +130,7 @@ body {
 }
 .button.primary:focus,
 .button.secondary:focus,
-.button.fourth:focus {
+.button-fourth:focus {
   outline: none;
   box-shadow: 0 0 0 1px var(--accent-color);
   border-radius: 4px;
@@ -838,20 +838,33 @@ body {
 .footer {
   background-color: var(--header-footer-fon);
   color: var(--primery-white-color);
-  /* padding: 60px 0; */
 }
-.footer-b {
+.footer__two-section {
   /* margin-left: 70px; */
 }
-.container.f-flex {
+.footer__flex {
   display: flex;
   justify-content: space-between;
 }
-.footer .logo {
+.footer__one-section {
+  padding: 60px 0;
+}
+.footer__logo {
+  display: block;
+
+  margin-right: 93px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.2;
   color: var(--primery-white-color);
 }
-
-.adds {
+.footer__logo:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px var(--accent-color);
+  border-radius: 4px;
+}
+.footer__address {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -859,19 +872,10 @@ body {
   margin-bottom: 9px;
   margin-top: 20px;
 }
-.footer-a {
-  padding: 60px 0;
-}
-.footer-b,
-.footer-c {
+.footer__two-section {
   padding: 72px 0;
 }
-.footer-c {
-  display: flex;
-  flex-direction: column;
-}
-.b-content,
-.c-content {
+.footer__content {
   display: inline-block;
   font-family: Roboto;
   font-weight: bold;
@@ -881,80 +885,82 @@ body {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-.contact-footer.link {
-  transition: color 250ms var(--timing-fm);
-}
-.contact-footer:focus {
-  outline: none;
-  /* box-shadow: 0 0 0 1px var(--accent-color); */
-  border-radius: 4px;
-  color: var(--accent-color);
-}
-.ft-item:not(:last-child) {
+.footer-contact__item:not(:last-child) {
   padding-bottom: 9px;
 }
-.contact-footer {
-  color: rgba(255, 255, 255, 0.6);
+.footer-contact__link {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms var(--timing-fm);
 }
-.container .footer {
+.footer-contact__link:focus {
+  outline: none;
+  border-radius: 4px;
+  color: var(--accent-color);
+}
+/* .container .footer {
   background-color: var(--header-footer-fon);
-}
-.f-social {
+} */
+.footer-social {
   display: flex;
 }
-.homepages {
+.footer-social__item {
+  display: flex;
   width: 44px;
   height: 44px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  fill: #ffffff;
-  display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  color: #ffffff;
   transition: fill 250ms var(--timing-fm),
     background-color 250ms var(--timing-fm);
 }
-
-.homepages:focus {
+.footer-social__item:not(:first-child) {
+  margin-left: 10px;
+}
+.footer-social__item:focus {
   outline: none;
   box-shadow: 0 0 0 1px var(--accent-color);
   background-color: var(--accent-color);
   border-radius: 50%;
 }
-.homepages:hover {
+.footer-social__item:hover {
   background-color: var(--accent-color);
-  fill: #ffffff;
+  fill: currentColor;
   border-radius: 50%;
   width: 44px;
   height: 44px;
 }
-.foot-svg {
+.footer-social__svg {
   justify-content: center;
+  fill: #ffffff;
 }
-.label-footer {
+.footer__three-section {
+  display: flex;
+  flex-direction: column;
+  padding: 72px 0;
 }
-.input-footer {
+.footer__input {
   width: 358px;
-
+  padding: 15px 16px;
   font-size: 16px;
   line-height: 1.2;
   letter-spacing: 0.03em;
 
   color: rgba(255, 255, 255, 0.6);
-  padding: 15px 16px;
+
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: transparent;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   transition: border 250ms var(--timing-fm);
 }
-.input-footer::placeholder {
+.footer__input::placeholder {
   font-size: 16px;
   line-height: 1.2;
   letter-spacing: 0.03em;
@@ -962,13 +968,13 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.button.fourth {
+.button-fourth {
   position: relative;
 }
-.button.fourth span {
+.button-fourth__subscribe {
   display: block;
 }
-.send-icon {
+.button-fourth__icon {
   position: absolute;
   top: 50%;
   right: 28px;
