@@ -902,13 +902,11 @@ body {
   border-radius: 4px;
   color: var(--accent-color);
 }
-/* .container .footer {
-  background-color: var(--header-footer-fon);
-} */
+
 .footer-social {
   display: flex;
 }
-.footer-social__item {
+.footer-social__link {
   display: flex;
   width: 44px;
   height: 44px;
@@ -923,13 +921,15 @@ body {
 .footer-social__item:not(:first-child) {
   margin-left: 10px;
 }
-.footer-social__item:focus {
+.footer-social__link:focus {
   outline: none;
   box-shadow: 0 0 0 1px var(--accent-color);
   background-color: var(--accent-color);
   border-radius: 50%;
+  width: 44px;
+  height: 44px;
 }
-.footer-social__item:hover {
+.footer-social__link:hover {
   background-color: var(--accent-color);
   fill: currentColor;
   border-radius: 50%;
