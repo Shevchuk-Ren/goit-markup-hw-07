@@ -79,7 +79,7 @@ body {
   cursor: pointer;
 }
 .button__third,
-.button__primary {
+.button-primary {
   min-width: 200px;
   padding: 10px 32px;
   margin-top: 30px;
@@ -98,7 +98,7 @@ body {
   display: flex;
   justify-content: center;
 }
-.button.secondary {
+.button-secondary {
   background-color: var(--secondary-btn-bg);
   color: var(--title-text-color);
   font-weight: 500;
@@ -128,8 +128,8 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
-.button.primary:focus,
-.button.secondary:focus,
+.button-primary:focus,
+.button-secondary:focus,
 .button-fourth:focus {
   outline: none;
   box-shadow: 0 0 0 1px var(--accent-color);
@@ -148,8 +148,8 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
-.button.secondary:hover,
-.button.secondary:focus {
+.button-secondary:hover,
+.button-secondary:focus {
   color: var(--primery-white-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -387,7 +387,7 @@ body {
   padding-bottom: 94px;
 }
 
-.section.no-padding {
+.section--no-padding {
   padding-bottom: 0px;
 }
 /*header*/
@@ -559,9 +559,7 @@ body {
   padding-bottom: 50px;
 }
 /*BLOCK Features преимуществ*/
-.features,
-.img-list,
-.team {
+.features {
   display: flex;
 }
 .features__item {
@@ -631,7 +629,7 @@ body {
 }
 /*TEAM*/
 
-.team {
+.section--color {
   background: #f5f4fa;
 }
 .team__list {
@@ -872,15 +870,10 @@ body {
 .footer__one-section {
   padding: 60px 0;
 }
-.footer__logo {
-  display: block;
 
-  margin-right: 93px;
-  font-family: 'Raleway', sans-serif;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 1.2;
+.logo--color {
   color: var(--primery-white-color);
+  padding: 0;
 }
 .footer__logo:focus {
   outline: none;
@@ -925,7 +918,9 @@ body {
   border-radius: 4px;
   color: var(--accent-color);
 }
-
+.footer-contact__link:hover {
+  color: var(--accent-color);
+}
 .footer-social {
   display: flex;
 }
