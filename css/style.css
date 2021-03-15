@@ -405,24 +405,27 @@ body {
 /*navigation*/
 
 .nav,
-.address {
+.address--flex {
   display: flex;
   align-items: center;
 }
 
-.address {
+.address--flex {
   justify-content: flex-end;
 }
 .logo {
   display: block;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  text-decoration: none;
   margin-right: 93px;
   color: var(--nav-text-color);
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   font-size: 26px;
   line-height: 1.2;
+}
+.nav__logo {
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .logo:focus {
   outline: none;
@@ -477,31 +480,31 @@ body {
 .site-nav__item:not(:last-child) {
   margin-right: 50px;
 }
-.contact-nav {
+.contact-list {
   display: flex;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.42;
   letter-spacing: 0.02em;
 }
-.contact-nav__item:not(:last-child) {
+.contact-list__item:not(:last-child) {
   margin-right: 50px;
 }
-.contact-nav__link {
+.contact-list__link {
   color: inherit;
   transition: color 250ms var(--timing-fm);
 }
-.contact-nav__link:hover,
+.contact-list__link:hover,
 .contact-footer.link:hover {
   color: var(--accent-color);
 }
-.contact-nav__link:focus,
+.contact-list__link:focus,
 .f-contacts:focus {
   outline: none;
   border-radius: 4px;
   color: var(--accent-color);
 }
-.contact-nav__icon {
+.contact-list__icon {
   margin-right: 10px;
   fill: currentColor;
 }
@@ -539,10 +542,6 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-/* .hero__title {
-  margin-left: auto;
-  margin-right: auto;
-} */
 
 /*модальное окно*/
 
@@ -871,35 +870,21 @@ body {
   padding: 60px 0;
 }
 
-.logo--color {
+.footer__logo {
   color: var(--primery-white-color);
-  padding: 0;
 }
 .footer__logo:focus {
   outline: none;
   box-shadow: 0 0 0 1px var(--accent-color);
   border-radius: 4px;
 }
-.footer__address {
+.address__text {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
   margin-bottom: 9px;
   margin-top: 20px;
-}
-.footer__two-section {
-  padding: 72px 0;
-}
-.footer__content {
-  display: inline-block;
-  font-family: Roboto;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  margin-bottom: 20px;
 }
 .footer-contact__item:not(:last-child) {
   padding-bottom: 9px;
@@ -921,6 +906,20 @@ body {
 .footer-contact__link:hover {
   color: var(--accent-color);
 }
+.footer__two-section {
+  padding: 72px 0;
+}
+.footer__content {
+  display: inline-block;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
 .footer-social {
   display: flex;
 }
