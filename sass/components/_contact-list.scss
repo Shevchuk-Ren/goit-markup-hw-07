@@ -6,6 +6,10 @@
   line-height: 1.42;
   letter-spacing: 0.02em;
 }
+.contact-list__item {
+  display: flex;
+  align-items: center;
+}
 .contact-list__item:not(:last-child) {
   margin-right: 50px;
 }
