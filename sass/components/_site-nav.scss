@@ -11,7 +11,7 @@
   padding-top: 31px;
   padding-bottom: 30px;
   color: $title-text-color;
-  transition: color 250ms $timing-fm;
+  transition: color $timing-fm;
 
 &:hover {
   color: $accent-color;
@@ -31,13 +31,15 @@
 }
 
 &--current::before {
-  display: inline-block;
+   display: inline-block;
   position: absolute;
-  bottom: -1px;
-  left: 0;
   content: '';
   height: 4px;
   width: 100%;
+ 
+  bottom: -1px;
+  left: 0;
+  
   background-color: $accent-color;
   border-radius: 2px;
 }

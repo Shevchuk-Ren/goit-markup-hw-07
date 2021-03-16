@@ -66,8 +66,8 @@
   fill: #afb1b8;
 
   border-radius: 50%;
-  transition: fill 250ms $timing-fm,
-    background-color 250ms $timing-fm;
+  transition: fill $timing-fm,
+    background-color  $timing-fm;
 
 &:focus {
   outline: none;
