@@ -11,7 +11,6 @@
   min-width: 200px;
   padding: 10px 32px;
   margin-top: 30px;
-
   font-weight: bold;
   font-size: 16px;
   line-height: 1.9;
@@ -20,14 +19,12 @@
   background: $accent-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-
 &:focus {
   outline: none;
   box-shadow: 0 0 0 1px $accent-color;
   border-radius: 4px;
+ }
 }
-}
-
 .button-secondary {
   min-width: 78px;
   padding: 6px 22px;
@@ -145,10 +142,9 @@
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-
-&:hover {
+ &:hover {
   outline: none;
-  fill: &accent-color;
+  fill: $accent-color;
  }
 &:focus {
   outline: none;
@@ -156,7 +152,4 @@
   border-radius: 50%;
   fill: $accent-color;
  }
-}
-.modal-button__icon {
-  transition: fill $timing-fm;
 }
