@@ -716,10 +716,10 @@ body {
   justify-content: center;
 }
 /*BLOCK фильтр по кнопкам*/
-.box-flt {
+.filterbox {
   padding-bottom: 20px;
 }
-.filter-item:not(:last-child) {
+.filter__item:not(:last-child) {
   margin-right: 8px;
 }
 /*BLOCK clients*/
