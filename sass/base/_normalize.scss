@@ -1,5 +1,3 @@
-/*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
-
 /*
 Document
 ========
@@ -201,9 +199,14 @@ textarea {
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
 }
-address {
-  font-style: normal;
-}
+
+/**
+Normalize li item
+*/
+
+ li {
+   font-style: normal;
+ }
 
 /**
 Remove the inheritance of text transform in Edge and Firefox.
@@ -317,4 +320,12 @@ Add the correct display in Chrome and Safari.
 
 summary {
   display: list-item;
+}
+
+/*
+Add the correct link without decoration
+*/
+
+a {
+  text-decoration: none;
 }
