@@ -13,7 +13,7 @@
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
- }
+}
 
 .modal {
   position: absolute;
@@ -76,15 +76,15 @@
   border-radius: 4px;
   transition: border $timing-fm;
 
-&:focus {
-  outline: none;
-  border: 1px solid $accent-color;
-  border-radius: 4px;
-}
-&:focus-within + .form-icon__image {
-  fill: $accent-color;
-  transition: fill $timing-fm;
-}
+  &:focus {
+    outline: none;
+    border: 1px solid $accent-color;
+    border-radius: 4px;
+  }
+  &:focus-within + .form-icon__image {
+    fill: $accent-color;
+    transition: fill $timing-fm;
+  }
 }
 .form-icon__image {
   position: absolute;
@@ -103,7 +103,6 @@
   color: rgba(117, 117, 117, 0.5);
 }
 
-
 .comment-field__textarea {
   height: 120px;
   margin-top: 4px;
@@ -118,40 +117,31 @@
   border-radius: 4px;
   transition: border 250ms $timing-fm;
 
-&:focus {
-  outline: none;
-  border: 1px solid $accent-color;
-  border-radius: 4px;
+  &:focus {
+    outline: none;
+    border: 1px solid $accent-color;
+    border-radius: 4px;
+  }
 }
-}
-.checkbox {
+.checkbx {
   display: block;
 
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
-
 }
 
-.checkbox__label {
+.checkbox {
   display: flex;
-  
 }
 .checkbox__input {
   display: none;
-
 }
-// .checkbox__input:checked ~ .checkbox__svg  {
-  
-//   display: block;
-  
-// }
-// .checkbox__input:checked + .checkbox__icon {
-//   border: none;
-//   .checkbox__svg  {
-//     display: block;
-//   }
-// }
+
+.checkbox__input:checked + .checkbox__icon {
+  border: none;
+}
+
 .checkbox__link {
   color: $accent-color;
 }
@@ -161,60 +151,18 @@
   border-radius: 2px;
   cursor: pointer;
 
-& use {
-  display: none;
-} 
-.checkbox__input:checked + & use {
-  display: block;
+  & .checkbox__svg {
+    display: none;
+  }
 
+  .checkbox__input:checked + & .checkbox__svg {
+    display: block;
+  }
 }
-.checkbox__input:checked + & {
-  border: none;
-}
-}
-
 .checkbox__span {
   display: block;
 }
 
 .checkbox__svg {
   display: block;
-}
-
-/* жесть */
-.checkbox {
-  display: block;
-
-  font-size: 14px;
-  line-height: 1.714;
-  letter-spacing: 0.03em;
-}
-.label-checkbox a {
-  color: $accent-color;
-}
-.check {
-  margin: 5px 5px 7px 13px;
-  border: 2px solid #2a2a2a;
-  border-radius: 2px;
-  cursor: pointer;
-}
-
-
-.label-checkbox {
-  display: flex;
-}
-.label-checkbox span {
-  display: block;
-}
-.input-checbox {
-  display: none;
-}
-.check-icon {
-  display: none;
-}
-.input-checbox:checked + .check use {
-  display: block;
-}
-.input-checbox:checked + .check {
-  border: none;
 }

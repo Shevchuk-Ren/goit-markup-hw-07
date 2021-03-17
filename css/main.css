@@ -863,14 +863,14 @@ li {
   border-radius: 4px;
 }
 
-.checkbox {
+.checkbx {
   display: block;
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
 }
 
-.checkbox__label {
+.checkbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -878,6 +878,10 @@ li {
 
 .checkbox__input {
   display: none;
+}
+
+.checkbox__input:checked + .checkbox__icon {
+  border: none;
 }
 
 .checkbox__link {
@@ -891,16 +895,12 @@ li {
   cursor: pointer;
 }
 
-.checkbox__icon use {
+.checkbox__icon .checkbox__svg {
   display: none;
 }
 
-.checkbox__input:checked + .checkbox__icon use {
+.checkbox__input:checked + .checkbox__icon .checkbox__svg {
   display: block;
-}
-
-.checkbox__input:checked + .checkbox__icon {
-  border: none;
 }
 
 .checkbox__span {
@@ -912,50 +912,6 @@ li {
 }
 
 /* жесть */
-.checkbox {
-  display: block;
-  font-size: 14px;
-  line-height: 1.714;
-  letter-spacing: 0.03em;
-}
-
-.label-checkbox a {
-  color: #2196f3;
-}
-
-.check {
-  margin: 5px 5px 7px 13px;
-  border: 2px solid #2a2a2a;
-  border-radius: 2px;
-  cursor: pointer;
-}
-
-.label-checkbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.label-checkbox span {
-  display: block;
-}
-
-.input-checbox {
-  display: none;
-}
-
-.check-icon {
-  display: none;
-}
-
-.input-checbox:checked + .check use {
-  display: block;
-}
-
-.input-checbox:checked + .check {
-  border: none;
-}
-
 .logo {
   display: block;
   text-decoration: none;
