@@ -136,9 +136,9 @@
 }
 .checkbox__input {
   appearance: none;
+
   &:focus + .checkbox__icon {
-    outline: none;
-    border: 2px solid $accent-color;
+    border: 2px solid #2a2a2a;
     border-radius: 4px;
   }
 }
@@ -167,6 +167,7 @@
 }
 .checkbox__link {
   color: $accent-color;
+
   &:focus {
     outline: none;
     border: 1px solid $accent-color;
@@ -175,11 +176,4 @@
 }
 .checkbox__svg {
   display: block;
-}
-.checkbox__svg:focus {
-  &:focus {
-    outline: none;
-    border: 1px solid $accent-color;
-    border-radius: 4px;
-  }
 }

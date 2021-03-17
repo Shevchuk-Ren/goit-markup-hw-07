@@ -883,8 +883,7 @@ li {
 }
 
 .checkbox__input:focus + .checkbox__icon {
-  outline: none;
-  border: 2px solid #2196f3;
+  border: 2px solid #2a2a2a;
   border-radius: 4px;
 }
 
@@ -923,12 +922,6 @@ li {
 
 .checkbox__svg {
   display: block;
-}
-
-.checkbox__svg:focus:focus {
-  outline: none;
-  border: 1px solid #2196f3;
-  border-radius: 4px;
 }
 
 .logo {
