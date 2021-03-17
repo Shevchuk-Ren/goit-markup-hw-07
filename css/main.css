@@ -884,7 +884,7 @@ li {
 
 .checkbox__input:focus + .checkbox__icon {
   outline: none;
-  border: 5px solid #2196f3;
+  border: 2px solid #2196f3;
   border-radius: 4px;
 }
 
